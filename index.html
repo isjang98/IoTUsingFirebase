@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IoT</title>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+//...
+//...
+//...
+  };
+  firebase.initializeApp(config);
+var database = firebase.database();
+database.ref("iot").on("value", function(snapshot){
+  console.log("===> " + snapshot.val().status);
+});
+</script>
+    </head>
+<body>
+
+    <input type="button" value="btn" id="btn" />
+
+</body>
+</html>
+
